@@ -1,2 +1,4 @@
 github.com/ClavinJune/httperr v0.0.0-20210531164006-2ebc5bc3c4e9 h1:BtEtreny+xaiA5vi/NdVX8AXbtg4cgXBHYh9s2xPFE0=
 github.com/ClavinJune/httperr v0.0.0-20210531164006-2ebc5bc3c4e9/go.mod h1:7ucwLm9EQCQlQUbKeDHY4MOEumT72selrslSJKuD410=
+github.com/ClavinJune/httperr v0.0.0 h1:tDvvABNw6EOTBSkIzu2TJV1ZmFB7vsL1mo3Vk+V+miA=
+github.com/ClavinJune/httperr v0.0.0/go.mod h1:7ucwLm9EQCQlQUbKeDHY4MOEumT72selrslSJKuD410=
