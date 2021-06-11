@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"runtime"
+	"strings"
 )
 
 var (
@@ -72,10 +73,10 @@ func (e Error) Error() string {
 	switch e.Unwrap().(type) {
 	case Error, *Error:
 		return fmt.Sprintf(`{"cause": %v, "message": "%v", "caller": "%v"}`,
-			e.Unwrap().Error(), e.message, e.caller)
+			e.Unwrap().Error(), strings.ReplaceAll(e.message, `"`, "`"), e.caller)
 	}
 	return fmt.Sprintf(`{"error": "%v", "message": "%v", "caller": "%v"}`,
-		e.Unwrap().Error(), e.message, e.caller)
+		strings.ReplaceAll(e.Unwrap().Error(), `"`, "`"), strings.ReplaceAll(e.message, `"`, "`"), e.caller)
 }
 
 // Unwrap enables errors.As and errors.Is
